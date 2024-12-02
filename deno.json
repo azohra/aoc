@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "2024:1": "cd 2024/1 && deno run --allow-read main.ts",
+    "2024:2": "cd 2024/2 && deno run --allow-read main.ts"
+  }
+}
