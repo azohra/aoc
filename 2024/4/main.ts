@@ -1,3 +1,5 @@
+const input = await Deno.readTextFile(new URL("./input.txt", import.meta.url));
+
 type Grid = string[][];
 
 const parseInput = (input: string): Grid => {
@@ -97,8 +99,7 @@ const findXMASPatterns = (grid: Grid): number => {
     return count;
 };
 
-async function solvePuzzle() {
-    const input = await Deno.readTextFile(new URL("./input.txt", import.meta.url));
+function solvePuzzle(input: string) {
     const grid = parseInput(input);
 
     const part1Answer = findXMAS(grid);
@@ -109,5 +110,5 @@ async function solvePuzzle() {
 }
 
 if (import.meta.main) {
-    solvePuzzle();
+    solvePuzzle(input);
 }
